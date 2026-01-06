@@ -1,7 +1,8 @@
-/* RESET & BASE */
+/* RESET */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #000;
   color: #fff;
   display: flex;
@@ -12,58 +13,57 @@ body {
   width: 100%;
   max-width: 420px;
   background-color: #000;
-  min-height: 100vh;
 }
 
-/* LOGO KECIL */
+/* LOGO */
 .header {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 .logo {
-  width: 120px; /* Ukuran diperkecil */
+  width: 100px; /* Ukuran kecil sesuai permintaan */
   height: auto;
 }
 
 /* BANNER */
-.image-box img {
-  width: 100%;
-  display: block;
-}
+.image-box img { width: 100%; display: block; }
 
-/* TOMBOL DAFTAR & LOGIN */
+/* BUTTONS */
 .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 15px;
+  gap: 12px;
+  padding: 20px;
 }
 .btn {
-  padding: 12px 0;
+  padding: 15px 0;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 5px;
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 8px;
   color: #000;
+  text-transform: uppercase;
 }
-.btn.login { background: linear-gradient(to bottom, #fff700, #ff8c00); }
+.btn.login { background: linear-gradient(to bottom, #ffea00, #ff9500); }
 .btn.daftar { background: linear-gradient(to bottom, #ffeb3b, #f44336); }
 
-/* TABEL DETAIL SITUS */
+/* DETAIL SITUS TABLE */
 .detail-container {
-  margin: 15px;
+  margin: 10px 15px;
+  background: #000;
   border: 1px solid #333;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
-.detail-title {
-  background: linear-gradient(to bottom, #333, #111);
-  padding: 10px;
+.detail-header {
+  background: linear-gradient(to bottom, #444, #000);
+  color: #ff9500;
   text-align: center;
-  color: #ff8c00;
+  padding: 10px;
   font-weight: bold;
-  border-bottom: 1px solid #444;
+  font-size: 18px;
+  border-bottom: 2px solid #333;
 }
 .detail-table {
   width: 100%;
@@ -74,41 +74,38 @@ body {
   border-bottom: 1px solid #222;
   font-size: 14px;
 }
-.detail-table td:first-child { color: #aaa; }
-.badge-red {
+.detail-table td:first-child { color: #888; width: 40%; }
+.site-name {
   background-color: #ff0000;
-  padding: 4px 12px;
-  border-radius: 4px;
-  color: #fff;
+  padding: 3px 15px;
+  border-radius: 5px;
   font-weight: bold;
+  color: #fff;
 }
 
-/* NAVIGASI BAWAH */
-.bottom-nav {
+/* TEXT AREA */
+.text-area { padding: 20px; text-align: center; font-size: 13px; line-height: 1.6; }
+.copyright { margin-top: 20px; color: #444; background: #111; padding: 5px; border-radius: 5px; }
+
+/* FIXED NAVIGATION */
+.fixed-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
   max-width: 420px;
-  background-color: #050505;
+  background-color: #080808;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  border-top: 2px solid #0000ff; /* Garis biru seperti di gambar */
+  border-top: 2px solid #0000ff; /* Garis biru di atas menu */
+  z-index: 999;
 }
-.nav-item {
+.nav-link {
   text-decoration: none;
-  color: #888;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 11px;
+  flex: 1;
 }
-.nav-item img {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 4px;
-}
-.nav-item span { color: #fff; }
-
-/* TEXT AREA */
-.text-area { padding: 20px; text-align: center; font-size: 13px; color: #666; }
+.nav-link img { width: 22px; height: 22px; margin-bottom: 5px; }
+.nav-link span { color: #aaa; font-size: 10px; }
